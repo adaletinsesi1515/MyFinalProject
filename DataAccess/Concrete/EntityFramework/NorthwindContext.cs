@@ -12,8 +12,12 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=BtkDukkan;Trusted_Connection=true");
+
+
+            optionsBuilder.UseSqlServer(@"Server=MG001;Database=BtkDukkan;Trusted_Connection=true");
         }
+
+        
 
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Product> Products { get; set; }
