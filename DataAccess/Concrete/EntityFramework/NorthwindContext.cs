@@ -14,7 +14,7 @@ namespace DataAccess.Concrete.EntityFramework
         {
 
 
-            optionsBuilder.UseSqlServer(@"Server=MG001;Database=BtkDukkan;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=AB01500-3535;Database=BtkDukkan;Trusted_Connection=true");
         }
 
         
