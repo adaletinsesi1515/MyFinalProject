@@ -4,20 +4,19 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Business.Concrete;
+using Core.Utilities.Results;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 
-namespace BtkDukkanMVCUI.Controllers
+namespace DukkanUI.Controllers
 {
-    public class ProductController : Controller
+    public class CategoryController : Controller
     {
-        // GET: Product
-
-        ProductManager pm = new ProductManager(new EfProductDal());
+        // GET: Category
+        private CategoryManager cm = new CategoryManager(new EfCategoryDal());
         public ActionResult Index()
         {
-            var listele = pm.GetAll().Data;
-            return View(listele);
+            return View(cm.GetAll().Data);
         }
     }
 }
